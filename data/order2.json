@@ -1,0 +1,11 @@
+{
+  "buyerEmail": "jane.smith@example.com",
+  "products": [
+    "cj8zjk8xl0000k5ixlq7vx2w4", // You must use an id from your own database!
+    "cj8zjk8xl0000l5ixlq7vx2w4"
+  ],
+  "status": "COMPLETED"
+}
+
+
+

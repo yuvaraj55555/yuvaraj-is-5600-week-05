@@ -1,0 +1,8 @@
+{
+  "buyerEmail": "john.doe@example.com",
+  "products": [
+    "cj8zjk8xl0000i5ixlq7vx2w4", // You must use an id from your own database!
+    "cj8zjk8xl0000j5ixlq7vx2w4"
+  ],
+  "status": "PENDING"
+}

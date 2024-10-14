@@ -1,0 +1,31 @@
+{
+  "name": "IS 5600 - Lab 5",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "npm start"
+  },
+  // Configure tool-specific properties.
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["app.js"]
+    },
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {},
+      "extensions": ["streetsidesoftware.code-spell-checker"]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [3000]
+}
