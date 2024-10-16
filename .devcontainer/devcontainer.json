@@ -6,7 +6,7 @@
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "npm install",
-  "postCreateCommand": "",
+  "postCreateCommand": "docker-compose up -d",
   "postAttachCommand": {
     "server": "npm start"
   },
@@ -25,7 +25,20 @@
     "3000": {
       "label": "Application",
       "onAutoForward": "openPreview"
+    },
+    "27017": {
+      "label": "MongoDB",
+      "onAutoForward": "notify"
     }
   },
-  "forwardPorts": [3000]
+  "forwardPorts": [3000, 27017],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "overrideCommand": false,
+  "containerEnv": {
+    "MONGO_INITDB_ROOT_USERNAME": "root",
+    "MONGO_INITDB_ROOT_PASSWORD": "example"
+  },
+  "runArgs": ["--init", "--privileged"]
 }
