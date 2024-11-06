@@ -1,5 +1,5 @@
 const db = require('../db');
-const Products = require('../models/products');
+const Products = require('../products');
 
 const products = require('../data/full-products.json');
 
