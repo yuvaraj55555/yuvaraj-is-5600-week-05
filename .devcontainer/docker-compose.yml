@@ -24,7 +24,7 @@ services:
       - mongodb-data:/data/db
 
     # Uncomment to change startup options
-    # environment:
+    environment:
      MONGO_INITDB_ROOT_USERNAME: root
      MONGO_INITDB_ROOT_PASSWORD: example
      MONGO_INITDB_DATABASE: products-db
