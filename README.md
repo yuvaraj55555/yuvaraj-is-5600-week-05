@@ -62,7 +62,8 @@ mongoose.connect(
 module.exports = mongoose
 ```
 
-This assumes you've already created your MongoDB database via MongoDB Atlas. You'll need the connection string to put in the `db.js` file. If you have not created this yet, please watch the video outlining how to.
+You should already have a MongoDB instance running in a docker container here in Codespaces, so you don't need to worry about creating one.
+
 3. Now, let's begin work on our products model. Open up the `products.js` file, and add the following code:
 
 ```js
@@ -238,10 +239,10 @@ async function destroy (_id) {
 
 Great! Now export these functions and you can now rebuild the lab, and test out your edit and delete endpoints. Using postman you should be able to submit a DELETE request or a PUT request with modified data.
 
-7. Now that we have the products module working, let's go ahead and import some data to the database. We've included a script that will read the `data/products.json` file and import the data into the database. This script can be found in the `scripts/import-products.js` file. To run the script, open up the Codespaces terminal and stop the currently running server. You can do this by pressing `Ctrl + C` in the terminal to stop the server and then run the following command to import the products:
+7. Now that we have the products module working, let's go ahead and import some data to the database. We've included a script that will read the `data/products.json` file and import the data into the database. This script can be found in the `script/import-products.js` file. To run the script, open up the Codespaces terminal and stop the currently running server. You can do this by pressing `Ctrl + C` in the terminal to stop the server and then run the following command to import the products:
 
 ```bash
-node scripts/import-products.js
+node script/import-products.js
 ```
 
 Once the script is complete, you'll need to restart the server. Simply execute the following command in the terminal to start the server again. Once the server is running, you should be able to see the products in the webview.
