@@ -4,15 +4,15 @@
   // "hostRequirements": {
   //   "cpus": 4
   // },
-  // "waitFor": "onCreateCommand",
-  // "updateContentCommand": "npm install",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
   
   "dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   "postAttachCommand": {
-    "server": "docker-compose up -d && npm start"
+    "server": "npm start"
   },
   // Configure tool-specific properties.
   "customizations": {
