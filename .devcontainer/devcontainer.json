@@ -8,7 +8,7 @@
   "updateContentCommand": "npm install",
   "postCreateCommand": "docker-compose up -d",
   "postAttachCommand": {
-    "server": "npm start"
+    "server": "docker-compose up -d && npm start"
   },
   // Configure tool-specific properties.
   "customizations": {
