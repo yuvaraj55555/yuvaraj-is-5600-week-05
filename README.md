@@ -394,14 +394,6 @@ async function create (fields) {
 2. We need to be able to delete an existing order. Create a new method in the `orders.js` module called `destroy()`. This method should take an `_id` and delete the order with the given `_id`. The method should not return a value. Again, you can use the `destroy()` method in the `products.js` module as a reference.
 3. For both of these new endpoints, we need to register them with the express server. Make sure they are registered in the `app.js` file similarly to how the `products` endpoints are registered.
 
-## Extra Credit
-
-1. Refactor the `edit()` method to use the spread operator without mutating state. This would look something like this:
-
-```js
-const newObject = {...existingObject, ...change}
-```
-
 ## Guidance and Testing
 
 1. This lab will require Postman to test endpoints. You can download Postman [here](https://www.postman.com/downloads/). Refer to the previous labs for guidance on how to use Postman.
